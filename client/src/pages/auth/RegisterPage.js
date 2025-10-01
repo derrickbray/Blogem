@@ -8,7 +8,7 @@ const RegisterPage = () => {
 
   // Redirect if already logged in
   if (isAuthenticated) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/blog" replace />;
   }
 
   return (
@@ -17,7 +17,7 @@ const RegisterPage = () => {
         <RegisterForm />
         <div className="auth-links">
           <p>
-            Already have an account? <Link to="/login">Login here</Link>
+            already have an account? <Link to="/login">login here</Link>
           </p>
         </div>
       </div>

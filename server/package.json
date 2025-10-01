@@ -1,7 +1,7 @@
 {
   "name": "bray-report-server",
   "version": "1.0.0",
-  "description": "Backend server for Bray Report writing application",
+  "description": "Backend server for bray.report blog platform",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",

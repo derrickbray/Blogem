@@ -8,7 +8,7 @@ const LoginPage = () => {
 
   // Redirect if already logged in
   if (isAuthenticated) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/blog" replace />;
   }
 
   return (
@@ -16,9 +16,9 @@ const LoginPage = () => {
       <div className="auth-container">
         <LoginForm />
         <div className="auth-links">
-          <p>
-            Don't have an account? <Link to="/register">Register here</Link>
-          </p>
+          <Link to="/register" className="btn btn-outline">
+            register new account
+          </Link>
         </div>
       </div>
     </div>

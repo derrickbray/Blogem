@@ -59,7 +59,7 @@ const LoginForm = () => {
         />
       </div>
       
-      <button type="submit" disabled={loading}>
+      <button type="submit" disabled={loading} className="btn btn-primary">
         {loading ? 'Logging in...' : 'Login'}
       </button>
     </form>

@@ -1,0 +1,272 @@
+/* Component Styles - Buttons, Forms, Cards, Badges */
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 0.25rem;
+  border: 2px solid;
+  border-radius: 0;
+  background-color: transparent;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  line-height: 1;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:focus {
+  outline: none;
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 2px rgba(0, 217, 255, 0.2);
+}
+
+/* Button Variants */
+.btn-primary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary);
+  color: var(--bg-dark);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--purple);
+  border: 2px solid var(--purple);
+}
+
+.btn-secondary:hover {
+  background-color: var(--purple);
+  color: white;
+}
+
+.btn-success {
+  background-color: transparent;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+
+.btn-success:hover {
+  background-color: var(--green);
+  color: var(--bg-dark);
+}
+
+.btn-danger {
+  background-color: transparent;
+  color: var(--red);
+  border: 2px solid var(--red);
+}
+
+.btn-danger:hover {
+  background-color: var(--red);
+  color: white;
+}
+
+.btn-info {
+  background-color: transparent;
+  color: var(--yellow);
+  border: 2px solid var(--yellow);
+}
+
+.btn-info:hover {
+  background-color: var(--yellow);
+  color: var(--bg-dark);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--cyan);
+  border: 2px solid var(--cyan);
+}
+
+.btn-outline:hover {
+  background-color: var(--cyan);
+  color: var(--bg-dark);
+}
+
+/* Button Sizes */
+.btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status-badge.published {
+  background-color: var(--green);
+  color: var(--bg-dark);
+}
+
+.status-badge.draft {
+  background-color: var(--orange);
+  color: var(--bg-dark);
+}
+
+.status-badge.archived {
+  background-color: var(--text-muted);
+  color: white;
+}
+
+/* Category and Tag Badges */
+.category-badge {
+  background-color: var(--purple);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  margin: 0.25rem;
+  display: inline-block;
+}
+
+.tag-badge {
+  background-color: var(--pink);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  margin: 0.25rem;
+  display: inline-block;
+}
+
+/* Card Components */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.card-header {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-title {
+  color: var(--yellow);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  color: var(--text-light);
+}
+
+.card-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Form Components */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(0, 217, 255, 0.2);
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+/* Select Dropdown */
+.form-select {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(0, 217, 255, 0.2);
+}
+
+/* Checkbox and Radio */
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form-check-input {
+  margin-right: 0.5rem;
+  accent-color: var(--color-primary);
+}
+
+.form-check-label {
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+/* Checkbox Label Improvements */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin: 0;
+  accent-color: var(--color-primary);
+}

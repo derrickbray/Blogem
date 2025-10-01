@@ -1,0 +1,322 @@
+/* Admin Dashboard Specific Styles */
+
+/* Admin Header */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.admin-header h1 {
+  color: var(--green);
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Dashboard Layout */
+.admin-dashboard {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dashboard-title {
+  color: var(--green);
+  font-size: 2rem;
+  margin: 0;
+}
+
+.dashboard-subtitle {
+  color: var(--text-light);
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Search and Filter Section */
+.search-filter-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem;
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  font-family: inherit;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(0, 217, 255, 0.2);
+}
+
+.filter-select {
+  min-width: 150px;
+  padding: 0.75rem;
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(0, 217, 255, 0.2);
+}
+
+/* Results Info */
+.results-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Post List */
+.post-list {
+  margin-top: 1rem;
+}
+
+.post-card-header {
+  margin-bottom: 1rem;
+}
+
+.post-title {
+  color: var(--yellow);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.post-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: flex-start;
+}
+
+.post-excerpt {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  line-height: 1.4;
+}
+
+.post-category {
+  margin: 0.5rem 0;
+}
+
+.post-tags {
+  margin: 0.5rem 0;
+}
+
+.post-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.post-meta span {
+  display: inline-block;
+}
+
+.post-author {
+  color: var(--cyan);
+}
+
+.post-date {
+  color: var(--pink);
+}
+
+.post-published {
+  color: var(--green);
+}
+
+/* Empty States */
+.empty-state,
+.no-results {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+}
+
+.empty-state h3,
+.no-results h3 {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+/* Loading States */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+}
+
+.loading::after {
+  content: '...';
+  animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
+}
+
+/* Error States */
+.error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--red);
+  color: var(--red);
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+/* Success States */
+.success {
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+/* Post Editor Specific */
+.post-editor {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.editor-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editor-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.editor-toolbar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+/* Post View Specific */
+.post-view {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.post-view-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.post-view-title {
+  color: var(--yellow);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-view-meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.post-view-content {
+  color: var(--text-light);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.post-view-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Admin Styles */
+@media (max-width: 768px) {
+  .admin-header,
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .search-filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .post-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-view-title {
+    font-size: 2rem;
+  }
+
+  .editor-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .editor-actions {
+    justify-content: center;
+  }
+}

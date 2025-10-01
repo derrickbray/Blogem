@@ -1,0 +1,517 @@
+/* client/src/styles/theme.css - bray.report Code Block Theme */
+
+/* CSS Variables - Additional Theme Colors (extends base.css) */
+:root {
+  /* Override primary color from base.css */
+  --color-primary: var(--green);
+}
+
+
+/* Code Block Aesthetic */
+.code-block,
+pre,
+code {
+  font-family: 'Fira Code', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  /* border-radius: 4px; */
+}
+
+/* Comment Syntax Styling */
+.comment-syntax {
+  color: var(--pink);
+  font-style: italic;
+}
+
+/* Navigation Styles */
+.navigation {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand a {
+  color: var(--cyan);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--cyan);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+  background-color: var(--bg-input);
+}
+
+.nav-links a.active {
+  color: var(--cyan);
+}
+
+.nav-link-button {
+  color: var(--cyan);
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link-button:hover {
+  color: var(--color-primary);
+  background-color: var(--bg-input);
+}
+
+.user-info {
+  color: var(--cyan);
+  font-size: 0.9rem;
+}
+
+.logout-button {
+  background: var(--red);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  /* border-radius: 4px; */
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+  background: #ff6b6b;
+}
+
+/* Admin Navigation Styles */
+.admin-nav {
+  background-color: var(--bg-dark);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.admin-nav .nav-brand a {
+  color: var(--cyan);
+}
+
+/* Admin Dashboard Header */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.admin-title h1 {
+  color: var(--color-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.admin-title p {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.admin-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.search-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.search-input,
+.category-select,
+.tag-select {
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  color: #333333;
+  font-family: inherit;
+  min-width: 200px;
+}
+
+.search-input:focus,
+.category-select:focus,
+.tag-select:focus {
+  outline: none;
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 2px rgba(0, 217, 255, 0.2);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.action-buttons .btn {
+  /* width: 150px; */
+  /* text-align: center; */
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 0.25rem;
+  border: 2px solid;
+  border-radius: 0;
+  background-color: transparent;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary);
+  color: var(--bg-dark);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--purple);
+  border: 2px solid var(--purple);
+}
+
+.btn-secondary:hover {
+  background-color: var(--purple);
+  color: white;
+}
+
+.btn-success {
+  background-color: transparent;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+
+.btn-success:hover {
+  background-color: var(--green);
+  color: var(--bg-dark);
+}
+
+.btn-danger {
+  background-color: transparent;
+  color: var(--red);
+  border: 2px solid var(--red);
+}
+
+.btn-danger:hover {
+  background-color: var(--red);
+  color: white;
+}
+
+.btn-info {
+  background-color: transparent;
+  color: var(--yellow);
+  border: 2px solid var(--yellow);
+}
+
+.btn-info:hover {
+  background-color: var(--yellow);
+  color: var(--bg-dark);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--cyan);
+  border: 2px solid var(--cyan);
+}
+
+.btn-outline:hover {
+  background-color: var(--cyan);
+  color: var(--bg-dark);
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-actions .btn {
+  width: 160px;
+  text-align: center;
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  /* border-radius: 8px; */
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: var(--shadow);
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: var(--cyan);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  color: #333333;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 2px rgba(0, 217, 255, 0.2);
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.status-badge.published {
+  background-color: var(--green);
+  color: var(--bg-dark);
+}
+
+.status-badge.draft {
+  background-color: var(--orange);
+  color: var(--bg-dark);
+}
+
+.status-badge.archived {
+  background-color: var(--text-muted);
+  color: white;
+}
+
+/* Post Status Badge Positioning */
+.post-card {
+  position: relative;
+  margin: .5rem 0;
+}
+
+.post-status-top {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 10;
+}
+
+/* Category and Tag Badges */
+.category-badge {
+  background-color: var(--purple);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  margin: 0.25rem;
+  display: inline-block;
+}
+
+.tag-badge {
+  background-color: var(--pink);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  margin: 0.25rem;
+  display: inline-block;
+}
+
+.tag-badge.clickable {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.tag-badge.clickable:hover {
+  background-color: var(--purple);
+  transform: scale(1.05);
+}
+
+.tag-badge.clickable.active {
+  background-color: var(--cyan);
+  color: var(--bg-dark);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Loading States */
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--cyan);
+}
+
+.loading-message {
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+
+/* Error States */
+.error-message {
+  background-color: var(--red);
+  color: white;
+  padding: 1rem;
+  /* border-radius: 4px; */
+  margin: 1rem 0;
+}
+
+/* Success States */
+.success-message {
+  background-color: var(--green);
+  color: var(--bg-dark);
+  padding: 1rem;
+  /* border-radius: 4px; */
+  margin: 1rem 0;
+}
+
+/* Info States */
+.info-message {
+  background-color: var(--yellow);
+  color: var(--bg-dark);
+  padding: 1rem;
+  /* border-radius: 4px; */
+  margin: 1rem 0;
+}
+
+/* React Quill Editor Styles */
+.ql-editor {
+  color: var(--text-light) !important;
+  background-color: var(--bg-input) !important;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+.ql-editor h1,
+.ql-editor h2,
+.ql-editor h3,
+.ql-editor h4,
+.ql-editor h5,
+.ql-editor h6 {
+  color: var(--cyan) !important;
+}
+
+.ql-editor p {
+  color: var(--text-light) !important;
+}
+
+.ql-editor blockquote {
+  color: var(--text-light) !important;
+  border-left: 4px solid var(--cyan);
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+.ql-editor code {
+  background-color: var(--bg-card) !important;
+  color: var(--green) !important;
+  padding: 0.2rem 0.4rem;
+  /* border-radius: 3px; */
+}
+
+.ql-editor pre {
+  background-color: var(--bg-card) !important;
+  color: var(--text-light) !important;
+  border: 1px solid var(--border-color);
+  /* border-radius: 4px; */
+  padding: 1rem;
+}
+
+.ql-toolbar {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+}
+
+.ql-toolbar .ql-stroke {
+  stroke: var(--text-light) !important;
+}
+
+.ql-toolbar .ql-fill {
+  fill: var(--text-light) !important;
+}
+
+.ql-toolbar button:hover {
+  background-color: var(--bg-input) !important;
+}
+
+.ql-toolbar button.ql-active {
+  background-color: var(--cyan) !important;
+}
+
+.ql-container {
+  border-color: var(--border-color) !important;
+  background-color: var(--bg-input) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .navigation {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}

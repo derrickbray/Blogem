@@ -17,17 +17,23 @@ app.use(express.json()); // Parse JSON request bodies
 
 // Route imports
 const authRoutes = require('./routes/auth');
-const projectRoutes = require('./routes/projects');
-const storyRoutes = require('./routes/stories');
-const chapterRoutes = require('./routes/chapters'); // Chapter routes
-const filesRoutes = require('./routes/files'); // File upload routes
+// Blog routes
+const postsRoutes = require('./routes/posts');
+const categoriesRoutes = require('./routes/categories');
+const tagsRoutes = require('./routes/tags');
+// Shared routes
+const filesRoutes = require('./routes/files');
 
 // Route registration
-app.use('/api/auth', authRoutes);       // Authentication endpoints
-app.use('/api/projects', projectRoutes); // Project CRUD endpoints
-app.use('/api/stories', storyRoutes);   // Story CRUD endpoints
-app.use('/api/chapters', chapterRoutes); // Chapter CRUD endpoints
-app.use('/api/files', filesRoutes);      // File upload endpoints
+app.use('/api/auth', authRoutes);         // Authentication endpoints
+
+// Blog API endpoints
+app.use('/api/posts', postsRoutes);       // Blog posts
+app.use('/api/categories', categoriesRoutes); // Blog categories
+app.use('/api/tags', tagsRoutes);         // Blog tags
+
+// Shared endpoints
+app.use('/api/files', filesRoutes);       // File upload endpoints
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
